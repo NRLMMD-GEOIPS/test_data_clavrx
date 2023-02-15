@@ -10,13 +10,22 @@
     # # # for more details. If you did not receive the license, for more information see:
     # # # https://github.com/U-S-NRL-Marine-Meteorology-Division/
 
+# v1.6.2: 2023-01-31, update README
+### Documentation
+* Add data sources information to README
+```
+modified: README.md
+```
 
-# @v0.1.0: @YYYY-MM-DD, Initial test data repository for @mydatatype@
+# v1.6.1: 2023-01-21, Initial test data repository for CLAVR-x outputs
 
 ### Major New Functionality
 * **README.md**: standard README with repo cloning, optional geoips installation, and testing
 * **CHANGELOG.md**: Initial CHANGELOG contents
 * **VERSION**: Required VERSION file
-* **uncompress_test_data.sh**: Script to automatically uncompress all the test data
 * **.gitattributes**: Includes files to automatically track via git lfs
 * **.gitignore**: Files to ignore.
+```
+new file: data/goes16_20230113_0000/clavrx_goes16_20230113000020.level2.hdf
+new file: data/himawari8_20201201/clavrx_H08_202012010900.level2.hdf
+```

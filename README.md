@@ -11,22 +11,7 @@
     # # # https://github.com/U-S-NRL-Marine-Meteorology-Division/
 
 
-GeoIPS Test Data Repository Template
-====================================
-
-This template repository contains everything necessary to create a test data repository for use with
-the GeoIPS processing infrastructure.
-
-Follow the 
-[step by step instructions](./docs/template_instructions.rst)
-for modifying the template files within this repo in order to create your own test data repository.
-
-Once test data repository has been set up properly, you can remove the entire
-"GeoIPS Test Data Repository Template" section
-in the README.md, leaving the appropriate content for your test data repo's README file.
-
-
-@datatype@ Test Datasets
+CLAVR-x Test Datasets
 ==========================
 
 This repository contains test datasets for use with the Geolocated Information Processing System.
@@ -35,22 +20,27 @@ Please see the
 [GeoIPS Documentation](https://github.com/NRLMMD-GEOIPS/geoips/blob/main/README.md)
 for more information on the GeoIPS plugin architecture and base infrastructure.
 
+
 Sample Dataset Sources
 -----------------------
 
-@Please include information on where this test dataset originated.  Links, citation information,
-and descriptions. 4-5 bullets.
+These CLAVR-x data files were produced at the Colorado State University Cooperative
+Institute for Research in the Atmosphere.
+
+* **License**: No constraints on data access or use.
+* **Original CLAVR-x Development**: NOAA/NESDIS and the University of
+  Wisconsin-Madison / CIMSS
+* **Data Production and Algorithm Enhancements**: Colorado State University CIRA
+* **CDR Program**: NOAA Climate Data Record Program for satellites
 
 
 System Requirements
 ---------------------
 
-* geoips >= 1.5.3
+* geoips >= 1.6.1
 * Test data repos contained in $GEOIPS_TESTDATA_DIR for tests to pass.
-   * git lfs  (if using git to clone test repos)
 * GeoIPS Plugins:
-   * @Include list of GeoIPS plugins that are required to read / process these datasets
-   * @This should include plugin package name, as well as required version number
+   * geoips_clavrx >= 1.6.1
 
 
 IF REQUIRED: Install base geoips package
@@ -70,8 +60,7 @@ Obtain test repo
     # Assuming you followed the fully supported installation,
     # using $GEOIPS_TESTDATA_DIR and $GEOIPS_CONFIG_FILE:
     source $GEOIPS_CONFIG_FILE
-    git clone $GEOIPS_REPO_URL/test_data_@datatype@ $GEOIPS_TESTDATA_DIR/test_data_@datatype@
-    $GEOIPS_TESTDATA_DIR/test_data_@datatype@/uncompress_test_data.sh  # required if compressed datasets
+    git clone $GEOIPS_REPO_URL/test_data_clavrx $GEOIPS_TESTDATA_DIR/test_data_clavrx
 ```
 
 Run sample test scripts
@@ -82,7 +71,6 @@ Run sample test scripts
     # using $GEOIPS_TESTDATA_DIR, $GEOIPS_PACKAGES_DIR, and $GEOIPS_CONFIG_FILE:
     source $GEOIPS_CONFIG_FILE
 
-    # @ Identify an example test script (in any plugin) that will process these test datasets.
     # GeoIPS-based test scripts should successfully return 0 if everything is set up properly.
-    $GEOIPS_PACKAGES_DIR/@package@/tests/scripts/@testscript@.sh
+    $GEOIPS_PACKAGES_DIR/geoips_clavrx/tests/test_all.sh
 ```
