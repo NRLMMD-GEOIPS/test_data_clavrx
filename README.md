@@ -39,6 +39,7 @@ System Requirements
 
 * geoips >= 1.6.1
 * Test data repos contained in $GEOIPS_TESTDATA_DIR for tests to pass.
+   * test_data_clavrx >= 1.6.1
 * GeoIPS Plugins:
    * geoips_clavrx >= 1.6.1
 
@@ -60,7 +61,7 @@ Obtain test repo
     # Assuming you followed the fully supported installation,
     # using $GEOIPS_TESTDATA_DIR and $GEOIPS_CONFIG_FILE:
     source $GEOIPS_CONFIG_FILE
-    git clone $GEOIPS_REPO_URL/test_data_clavrx $GEOIPS_TESTDATA_DIR/test_data_clavrx
+    git clone https://github.com/NRLMMD-GEOIPS/test_data_clavrx $GEOIPS_TESTDATA_DIR/test_data_clavrx
 ```
 
 Run sample test scripts
